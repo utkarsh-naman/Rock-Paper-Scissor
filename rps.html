@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title >&#9994 &#128400 &#9996</title>
+    <link rel="shortcut icon" type="image/png" href="image/rcp.png">
+    <link rel="stylesheet" href="css style/rps.css">
+    
+      
+    </style>
+  </head>
+
+  <body>
+    Choose from 'Rock', 'Paper', 'Scissor'
+    <p></p>
+    <button title="tap to chose rock" class="buttons"
+    onclick="
+      compute(-1);
+      if(state==1)
+        display('&#9994', '&#9996', 'You win');
+      
+      else if(state==0)
+        display('&#9994', '&#9994', 'It\'s a tie');
+
+      else
+        display('&#9994', '&#128400', 'You Lose');
+    ">&#9994</button>
+    
+    
+    <button title="tap to chose paper" class="buttons"
+    onclick="
+      compute(0);
+      if(state==1)
+        display('&#128400', '&#9994', 'You win');
+      
+      else if(state==0)
+        display('&#128400', '&#128400', 'It\'s a tie');
+
+      else
+        display('&#128400', '&#9996', 'You Lose');
+    ">&#128400</button>
+    
+    
+    <button title="tap to chose scissor" class="buttons"
+    onclick="
+      compute(1);
+      if(state==1)
+        display('&#9996', '&#128400', 'You win');
+      
+      else if(state==0)
+        display('&#9996', '&#9996', 'It\'s a tie');
+
+      else
+        display('&#9996', '&#128400', 'You Lose');
+    ">&#9996</button>
+
+    <button title="tap to reset score" class="buttons"
+    onclick="
+      stat.win=0;
+      stat.lose=0;
+      stat.tie=0;
+      stat.game=0;
+      localStorage.removeItem('stats');
+      pElement.innerHTML = ``;
+      pElement2.innerHTML = `Game:${stat.game}, Win:${stat.win}, Lose:${stat.lose}, Tie:${stat.tie}`;
+    ">&#10227</button>
+    <p class="choice"></p>
+    <p class="stat">Game:<span id="statgame"></span>, Win:<span id="statwin"></span>, Lose:<span id="statlose"></span>, Tie:<span id="stattie"></span></p>
+    
+    <script src="scripts/rps.js">
+      
+    </script>
+  </body>
+</html>
