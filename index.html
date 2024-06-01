@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >&#9994 &#128400 &#9996</title>
     <link rel="shortcut icon" type="image/png" href="image/rcp.png">
     <link rel="stylesheet" href="css style/rps.css">
@@ -11,9 +12,8 @@
   </head>
 
   <body>
-    <div class="div">
-    Choose from 'Rock', 'Paper', 'Scissor'
-    <p></p>
+    <h2 id="instruction">Choose from 'Rock', 'Paper', 'Scissor'</h2>
+    <div id="button-container">
     <button title="tap to chose rock" class="buttons rock"
     onclick="
       compute(-1);
@@ -65,9 +65,10 @@
       pElement.innerHTML = ``;
       pElement2.innerHTML = `Game:${stat.game}, Win:${stat.win}, Lose:${stat.lose}, Tie:${stat.tie}`;
     ">&#10227</button>
+    </div>
     <p class="choice"></p>
     <p class="stat">Game:<span id="statgame"></span>, Win:<span id="statwin"></span>, Lose:<span id="statlose"></span>, Tie:<span id="stattie"></span></p>
-  </div>
+  
     <script src="scripts/rps.js">
     
     </script>

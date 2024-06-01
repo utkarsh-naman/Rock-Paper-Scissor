@@ -2,24 +2,35 @@ body{
   background-color: black;
   color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-family: Arial;
   font-weight: bold;
   font-size: 40px;
 }
-
-.div{
-  justify-content: center;
-  align-items: center;
+#instruction {
+  text-align: center;
+  margin-bottom: 30px;
+  user-select: none;
 }
 
+#button-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.choice,
+.stat{
+  margin-top: 30px;
+  user-select: none;
+}
 .buttons{
-  height: 120px;
-  width:120px;
+  height: 160px;
+  width:160px;
   border: 3px solid white;
   background-color:black;
-  border-radius: 60px;
+  border-radius: 80px;
   color: white;
   font-weight: bold;
   padding-right:15px;
@@ -32,31 +43,9 @@ body{
   user-select: none;
   transition: transform 0.3s ease;
 }
-
-.rock:hover {
+.buttons:hover {
   transform: scale(1.7); 
 }
-
-.paper:hover {
-  transform: scale(1.7);
-}
-.scissor:hover {
-  transform: scale(1.7); 
-}
-
-.reset:hover {
-  transform: scale(1.7); 
-}
-
-.rock:hover ~ .paper,
-.rock:hover ~ .scissor,
-.rock:hover ~ .reset,
-.paper:hover ~ .scissor,
-.paper:hover ~ .reset,
-.paper:hover ~ .rock,
-.scissor:hover ~ .reset
-.scissor:hover ~ .rock,
-.scissor:hover ~ .paper {
+#button-container:hover .buttons:not(:hover) {
   opacity: 0.1;
 }
-
