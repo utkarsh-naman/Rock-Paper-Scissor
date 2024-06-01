@@ -1,10 +1,17 @@
 body{
   background-color: black;
   color: white;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Arial;
   font-weight: bold;
   font-size: 40px;
+}
+
+.div{
+  justify-content: center;
+  align-items: center;
 }
 .buttons{
   height: 120px;
@@ -21,4 +28,39 @@ body{
   font-size: 60px;
   cursor: pointer;
   margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.rock:hover {
+  transform: scale(1.7); /* Scale button on hover */
+}
+
+.paper:hover {
+  transform: scale(1.7); /* Scale button on hover */
+}
+.scissor:hover {
+  transform: scale(1.7); /* Scale button on hover */
+}
+
+.reset:hover {
+  transform: scale(1.7); /* Scale button on hover */
+}
+
+.rock:hover ~ .paper,
+.rock:hover ~ .scissor,
+.rock:hover ~ .reset,
+.paper:hover ~ .scissor,
+.paper:hover ~ .reset,
+.scissor:hover ~ .reset {
+  opacity: 0.1;
+}
+
+/* Reduce opacity of buttons on the left when button is hovered */
+.rock:hover ~ .scissor,
+.rock:hover ~ .reset,
+.paper:hover ~ .rock,
+.paper:hover ~ .reset,
+.scissor:hover ~ .rock,
+.scissor:hover ~ .paper {
+  opacity: 0.1;
 }

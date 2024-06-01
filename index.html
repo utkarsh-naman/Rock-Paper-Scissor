@@ -11,9 +11,10 @@
   </head>
 
   <body>
+    <div class="div">
     Choose from 'Rock', 'Paper', 'Scissor'
     <p></p>
-    <button title="tap to chose rock" class="buttons"
+    <button title="tap to chose rock" class="buttons rock"
     onclick="
       compute(-1);
       if(state==1)
@@ -27,7 +28,7 @@
     ">&#9994</button>
     
     
-    <button title="tap to chose paper" class="buttons"
+    <button title="tap to chose paper" class="buttons paper"
     onclick="
       compute(0);
       if(state==1)
@@ -41,7 +42,7 @@
     ">&#128400</button>
     
     
-    <button title="tap to chose scissor" class="buttons"
+    <button title="tap to chose scissor" class="buttons scissor"
     onclick="
       compute(1);
       if(state==1)
@@ -54,7 +55,7 @@
         display('&#9996', '&#128400', 'You Lose');
     ">&#9996</button>
 
-    <button title="tap to reset score" class="buttons"
+    <button title="tap to reset score" class="buttons reset"
     onclick="
       stat.win=0;
       stat.lose=0;
@@ -66,9 +67,9 @@
     ">&#10227</button>
     <p class="choice"></p>
     <p class="stat">Game:<span id="statgame"></span>, Win:<span id="statwin"></span>, Lose:<span id="statlose"></span>, Tie:<span id="stattie"></span></p>
-    
+  </div>
     <script src="scripts/rps.js">
-      
+    
     </script>
   </body>
 </html>
