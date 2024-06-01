@@ -34,18 +34,18 @@ body{
 }
 
 .rock:hover {
-  transform: scale(1.7); /* Scale button on hover */
+  transform: scale(1.7); 
 }
 
 .paper:hover {
-  transform: scale(1.7); /* Scale button on hover */
+  transform: scale(1.7);
 }
 .scissor:hover {
-  transform: scale(1.7); /* Scale button on hover */
+  transform: scale(1.7); 
 }
 
 .reset:hover {
-  transform: scale(1.7); /* Scale button on hover */
+  transform: scale(1.7); 
 }
 
 .rock:hover ~ .paper,
@@ -53,16 +53,10 @@ body{
 .rock:hover ~ .reset,
 .paper:hover ~ .scissor,
 .paper:hover ~ .reset,
-.scissor:hover ~ .reset {
-  opacity: 0.1;
-}
-
-/* Reduce opacity of buttons on the left when button is hovered */
-.rock:hover ~ .scissor,
-.rock:hover ~ .reset,
 .paper:hover ~ .rock,
-.paper:hover ~ .reset,
+.scissor:hover ~ .reset
 .scissor:hover ~ .rock,
 .scissor:hover ~ .paper {
   opacity: 0.1;
 }
+
